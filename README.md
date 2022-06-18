@@ -6,6 +6,8 @@ Challenge By FRONTEND MENTOR Using HTML CSS And JavaScript, API link for urlShor
 
 "i used WOW JS Library for some animation" 
 
-NOTE : THE WEBSITE IS HOSTED ON NETLIFY YOU CAN CHECK IT OUT : https://urlshortapi.netlify.app
+NOTE : THE WEBSITE IS HOSTED ON NETLIFY YOU CAN CHECK IT OUT : https://urlshortapi.netlify.app/public
 
 NOTE : ALL RIGHTS RESERVED FOR FRONTEND MENTOR.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0be9199a-bd0b-4b39-ad3e-3ec2012607e1/deploy-status)](https://app.netlify.com/sites/urlshortapi/deploys)
