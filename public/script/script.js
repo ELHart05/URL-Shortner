@@ -8,24 +8,10 @@ const desk_ul = document.querySelector(".desk-ul");
 const right_side = document.querySelector(".right-side");
 const alert_i = document.querySelector(".alert-i");
 
-let Cpt = 0;
+let Cpt = 0,
+    urlValid = /^(ftp|http|https):\/\/[^ "]+$/;
 
 alert_i.style.opacity = "0";
-
-function checkLink() {
-    var link = 'https://';
-    var cpt = 0;
-    for (let i = 0; i < 8; i++) {
-        if (input.value[i] == link[i]) {
-            cpt++
-        }
-    }
-    if ((!input.value) || (cpt != 8)) {
-        return false
-    } else {
-        return true
-    }
-}
 
 async function API(value) {
     try {
@@ -51,7 +37,7 @@ hamburger.addEventListener("click", function () {
 shorten_btn.addEventListener("click", async function () {
     let Content = await API(input.value);
 
-    if ((checkLink()) && (input.value.includes(".")) && (Content.ok == true)) {
+    if ((urlValid.test(input.value)) && (input.value.includes(".")) && (Content.ok == true)) {
         let primaryDiv = document.createElement("div");
         primaryDiv.classList.add("added", "wow", "fadeIn");
         let paragraph = document.createElement("p");
@@ -89,7 +75,7 @@ shorten_btn.addEventListener("click", async function () {
 })
 
 input.addEventListener("keyup", function () {
-    if (input.value.includes("https://")) {
+    if (urlValid.test(input.value)) {
         input.classList.add("input-check-green");
         alert_i.style.opacity = "0";
         input.classList.remove("input-check-red");
