@@ -31,14 +31,14 @@ body {
     overflow-x: hidden;
 }
 
-nav {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
 }
 
-nav>div {
+header>div {
     margin: 18px 20px;
 }
 
@@ -96,7 +96,7 @@ a:hover {
     color: var(--Very-Dark-Blue);
 }
 
-header {
+.first-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -150,7 +150,7 @@ header {
     font-size: 1.1rem;
 }
 
-section {
+.section {
     width: 100%;
     background-color: var(--Gray);
     display: flex;
@@ -506,7 +506,7 @@ footer a:hover {
 }
 
 @media screen and (max-width:850px) {
-    header {
+    .first-section {
         flex-direction: column-reverse;
     }
 
@@ -531,7 +531,7 @@ footer a:hover {
         line-height: 1.3rem;
     }
 
-    header>* {
+    .first-section>* {
         width: 100%;
     }
 
