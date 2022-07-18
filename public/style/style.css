@@ -549,7 +549,8 @@ footer a:hover {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 10px;
+        margin-top: 30px;
+        width: 100% !important;
     }
 
     .started-btn {
@@ -744,6 +745,7 @@ footer a:hover {
 
     .title3 {
         line-height: 2rem;
+        font-size: 9vw;
     }
 
     .input {
