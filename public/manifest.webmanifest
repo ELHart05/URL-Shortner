@@ -1,0 +1,18 @@
+{
+  "id": "/",
+  "name": "Shortly: Link Shortener, QR and Analytics",
+  "short_name": "Shortly",
+  "description": "Shorten links, generate QR codes, set custom aliases, password locks, self-destruct limits and track real click analytics.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#16121f",
+  "theme_color": "#3a3054",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

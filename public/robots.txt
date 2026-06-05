@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://urlshortapi.netlify.app/sitemap.xml
+Sitemap: https://urlshortner-revival-2026.netlify.app/sitemap.xml

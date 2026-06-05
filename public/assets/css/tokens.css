@@ -1,0 +1,100 @@
+/* Self-hosted Poppins (latin subset), no external font request, works offline */
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/poppins-500.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/poppins-600.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/poppins-700.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 800; font-display: swap; src: url("../fonts/poppins-800.woff2") format("woff2"); }
+
+/* Design tokens, Shortly 2026 Brand palette preserved from the 2022 original (Frontend Mentor "Shortly"): Cyan + Dark Violet + Red. Everything else is new. */
+
+:root {
+  /* Brand (unchanged silhouette) */
+  --cyan: hsl(180 66% 49%);
+  --cyan-strong: hsl(180 66% 41%);
+  --cyan-soft: hsl(180 66% 49% / 0.14);
+  --cyan-text: hsl(180 66% 49%); /* cyan used as text; overridden darker in light theme */
+  --focus-ring: hsl(180 66% 49%); /* keyboard focus indicator; darkened in light theme for 3:1 */
+  --violet: hsl(257 27% 26%);
+  --red: hsl(0 87% 67%);
+  --green: hsl(152 58% 45%);
+  --amber: hsl(38 92% 56%);
+  /* status colors used as TEXT (darkened in light theme for AA); bright vars stay for accents/borders */
+  --red-text: var(--red);
+  --green-text: var(--green);
+  --amber-text: var(--amber);
+
+  /* Fluid type scale (clamp = responsive without breakpoints) */
+  --fs-300: clamp(0.8rem, 0.76rem + 0.2vw, 0.9rem);
+  --fs-400: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+  --fs-500: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  --fs-600: clamp(1.4rem, 1.2rem + 1vw, 1.9rem);
+  --fs-700: clamp(1.9rem, 1.5rem + 2.2vw, 3rem);
+  --fs-800: clamp(2.4rem, 1.7rem + 3.6vw, 4.2rem);
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.35s;
+
+  --container: 1180px;
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Dark theme (default) */
+:root,
+[data-theme="dark"] {
+  --bg: hsl(260 18% 9%);
+  --bg-2: hsl(258 17% 13%);
+  --surface: hsl(258 18% 15% / 0.72);
+  --surface-solid: hsl(258 18% 16%);
+  --border: hsl(255 12% 100% / 0.1);
+  --border-strong: hsl(255 12% 100% / 0.2);
+  --text: hsl(0 0% 98%);
+  --text-muted: hsl(257 10% 72%);
+  --text-faint: hsl(257 8% 60%);
+  --glass-blur: 16px;
+  --shadow: 0 18px 50px -20px hsl(260 40% 3% / 0.8);
+  --hero-glow-1: hsl(180 66% 49% / 0.35);
+  --hero-glow-2: hsl(257 60% 55% / 0.4);
+  --hero-glow-3: hsl(330 70% 55% / 0.28);
+}
+
+/* Light theme */
+[data-theme="light"] {
+  /* Bright --cyan stays for fills/borders; cyan-as-TEXT uses the darker
+     --cyan-text so it meets WCAG AA on light surfaces. */
+  --cyan-text: hsl(184 78% 25%);
+  --focus-ring: hsl(184 78% 30%);
+  --red-text: hsl(0 72% 42%);
+  --green-text: hsl(152 60% 30%);
+  --amber-text: hsl(36 90% 30%);
+  --bg: hsl(250 40% 98%);
+  --bg-2: hsl(250 40% 96%);
+  --surface: hsl(0 0% 100% / 0.78);
+  --surface-solid: hsl(0 0% 100%);
+  --border: hsl(257 20% 20% / 0.1);
+  --border-strong: hsl(257 20% 20% / 0.18);
+  --text: hsl(260 25% 14%);
+  --text-muted: hsl(257 12% 38%);
+  --text-faint: hsl(257 13% 43%);
+  --glass-blur: 14px;
+  --shadow: 0 18px 45px -22px hsl(257 40% 40% / 0.4);
+  --hero-glow-1: hsl(180 66% 49% / 0.32);
+  --hero-glow-2: hsl(257 70% 65% / 0.3);
+  --hero-glow-3: hsl(330 80% 70% / 0.22);
+}
